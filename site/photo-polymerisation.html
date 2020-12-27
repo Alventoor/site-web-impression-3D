@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href='theme/style.css' />
+        <title>TPE - L'impression 3D par photo-polymérisation</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="borderLeft"></div>
+            <div id="firstTitle"><h1>L'impression</h1>TPE 2015-2016</div>
+            <div id="secondTitle">Première S<h2>3D</h2></div>
+            <div id="borderRight"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='modelisation-3D.html'> La modélisation 3D</a></li>
+                <li>
+                    <ul class="submenu">
+                        <li>L'impression 3D par:</li>
+                        <li id="active"><a>Photo-polymérisation</a></li>
+                        <li><a href='fused-deposition-modeling.html'>Dépôt de matière fondue</a></li>
+                        <li><a href='liage-poudre.html'>Liage de poudre</a></li>
+                    </ul>
+                </li>
+                <li><a href='nouvelles-possibilites.html'>De nouvelles possibilités</a></li>
+                <li><a href='annexes.html'>Annexes</a></li>
+            </ul>
+        </nav>
+
+        <div id="pageBlock">
+        <article>
+            <div id="articleHeader">
+                <div id="articleTitles">
+                    <span id="firstLetter">P</span>
+                    <h1>hoto-polymérisation</h1>
+                    <h2>L'impression 3D par</h2>
+                </div>
+                <img data-info="horizontal" src='images/PP/Polystyrene_formation.png' alt="Molécule Polystyrène"/>
+            </div>
+            
+            <p>Il a été vu à travers la page précédente de quelle façon l'ordinateur était capable de générer un objet numérique au sein d'un espace de dimension
+                3 puis de quelle façon les imprimantes tridimensionnelles parvenaient à interpréter ces données. Cette page ainsi que les deux suivantes vont
+                désormais présenter le fonctionnement général d'une impression 3D à travers les trois procédés de fabrication additive les plus utilisés, chacun
+                d'entre eux possédant un fonctionnement différent.</p>
+
+            <p>Il existe de nombreux procédés de fabrication additive, qu'il est possible de classer en trois grandes catégories : les procédés basés sur la
+                photo-polymérisation, ceux fonctionnant par dépôt de matière fondue et ceux fonctionnant par liage de poudre. Ce chapitre permettra de découvrir
+                le fonctionnement du plus ancien des procédés de fabrication par photo-polymérisation, la stéréolithographie, ainsi qu'à ses possibilités
+                d'évolution future. Mais avant, et afin de mieux comprendre le fonctionnement de cette dernière, voici une explication de la polymérisation.</p>
+
+            <p>La polymérisation est une réaction chimique durant laquelle, sous l'effet d'un agent extérieur, des liaisons covalentes vont se former entre les
+                différents monomères présents. La macromolécule qui en résulte est alors appelée polymère. À l'échelle macroscopique, la réaction chimique se
+                constate par la solidification d'un liquide monomère. Une photo-polymérisation correspond ainsi à une polymérisation dont l'agent extérieur est
+                une radiation proche ou faisant partie du domaine des ondes visibles, comme les ultraviolets ou les infrarouges. Le matériau qui résulte de
+                celle-ci peut alors être appelé matériau photo-polymère.</p>
+
+            <h3>La stéréolithographie</h3>
+
+            <p>La stéréolithographie est le tout premier procédé de fabrication additive à avoir vu le jour, tout d'abord en 1983 via des recherches effectuées par
+                une équipe de trois chercheurs français, puis en 1984 via le dépôt d'un second brevet par l'Américain Charles Hull après l'abandon du premier et
+                des recherches françaises. Finalement, c'est en 1988 que la première machine commerciale apparaîtra, fabriquée par la société 3D System, fondée par
+                Charles Hull deux ans plus tôt.</p>
+
+            <div class="box" data-info="image">
+            <a href='images/PP/brevet_sls.jpg'><img src='images/PP/brevet_sls.jpg' alt="Brevet Stéréolithographie"/></a>
+            <p>Schéma du brevet de Charles Hull sur la stéréolithographie<br/>(Source : journaldugeek.com)</p>
+            </div>
+
+            <p>Aujourd'hui la stéréolithographie est la technique d'impression 3D la plus utilisée dans le domaine du prototypage rapide, car elle possède une
+                très grande précision, l'épaisseur de ses couches pouvant aller de 100 à 20 micromètres, et une bonne rapidité d'impression par couches. Ce
+                procédé est ainsi capable d'imprimer des objets très petits ou très grands, de forme simple ou complexe. De plus, une fois certaines étapes
+                post-impression effectuées, les pièces fabriquées sont suffisamment résistantes pour servir de moule.</p>
+
+            <p>Mais si la stéréolithographie est uniquement exploitée dans le domaine du prototypage rapide, c'est parce qu'elle n'est pas exempte de tout défaut.
+                Deux d'entre eux, le prix et la vitesse d'impression, sont suffisamment importants pour empêcher l'utilisation de cette technologie pour la
+                fabrication de masse. En effet, les machines exploitant la stéréolithographie sont très coûteuses, tout comme les cartouches de résines liquides.
+                Et bien que sa vitesse assure une impression de qualité, la stéréolithographie est la technique de fabrication additive possédant les plus longs
+                temps d'impression, en moyenne 3 fois plus lent que les autres.</p>
+
+            <h3>Fonctionnement de la stéréolithographie</h3>
+
+            <p>Avec ce procédé, la pièce est imprimée sur une plateforme mobile, immergée dans un réservoir rempli d'un liquide monomère. La photo-polymérisation
+                va alors être provoquée par un rayon de lumière ultra-violet dont l'orientation sur les axes x et y est contrôlée à l'aide de déflecteurs. Le
+                faisceau laser balaie ainsi la surface du liquide monomère en fonction du modèle 3D fourni par le fichier FAO. Une fois la couche située à la
+                surface solidifiée, la plateforme se déplace de la valeur de l'épaisseur de la couche suivante et une nouvelle section est solidifiée. Il y a donc
+                autant de cycles qu'il y a de couches nécessaires pour obtenir le volume du modèle 3D. Par ailleurs, dans le cas où le laser se trouve au-dessus du
+                bac de résine, l'exploitation d'un racleur entre chaque cycle afin de s'assurer du bon étalage du liquide est obligatoire.</p>
+
+            <div class="box" data-info="image">
+            <a href='images/PP/sla.png'><img src='images/PP/sla.png' alt="Schéma Imprimante 3D Stéréolithographie"/></a>
+            <p>Structure d'une imprimante 3D par stéréolithographie<br/>(Source : univ-reims.fr)</p>
+            </div>
+            
+            <p>Une fois l'impression terminée, des finitions sont nécessaires afin d'obtenir la pièce finale. Ainsi, la pièce doit être nettoyée de tout support,
+                souvent à l'aide d'un solvant, puis passée au four ultraviolet afin d'accroître la résistance du matériau et détruire les derniers résidus non
+                désirés.</p>
+
+            <h3>La technologie CLIP, héritière de la stéréolithographie</h3>
+
+            <p>Malgré l'ancienneté du procédé de fabrication par stéréolithographie, les différents acteurs continuent de le faire évoluer. Ainsi, la société
+                américaine Carbon3D a présentée durant la conférence TED de 2015 une toute nouvelle technologie, la CLIP pour Continous Liquid Interface Production.
+                Toute nouvelle, ou pas, car cette dernière reprend en réalité les mêmes éléments que la stéréolithographie. Cependant, le faisceau laser est remplacé
+                par un projecteur ultra-violet tandis que la vitre séparant le réservoir du projecteur est désormais perméable à l'oxygène.</p>
+
+            <div class="box" data-info="image">
+            <a href='images/PP/Clip_fonctionnement.png'><img src='images/PP/Clip_fonctionnement.png' alt="Clip Impression 3D"/></a>
+            <p>fonctionnement de la technologie CLIP<br/>(Source : carbon3d.com)</p>
+            </div>
+
+            <p>Ces changements permettent, selon Carbon3D, de révolutionner la fabrication additive en imprimant réellement en 3D plutôt que par simple empilement de
+                couches horizontales. En effet, grâce à cette nouvelle vitre, il est possible de contrôler le flux d'oxygène traversant le liquide et ainsi de créer
+                une "zone morte" de 10 micromètres où le liquide ne se solidifie pas. En conséquence il n'est plus nécessaire d'attendre que la plateforme soit monté
+                d'un niveau pour continuer l'impression, ce qui accélère la fabrication de la pièce.</p>
+
+            <div class="box" data-info="image">
+            <a href='images/PP/Clip_comparaison.png'><img src='images/PP/Clip_comparaison.png' alt="Vitesse Impression 3D"/></a>
+            <p>Comparaison des vitesses des différents procédés de fabrication<br/>(Source : carbon3d.com)</p>
+            </div>
+
+
+            <!-- Début balise choix de la page pour écran de tablette -->
+            <div id="choosePageTab">
+                <a href='modelisation-3D.html'><</a>
+                <a href='fused-deposition-modeling.html'>></a>
+            </div>
+            <!-- Fin balise choix de la page pour écran de tablette -->
+
+        </article>
+
+        <!-- Début balise choix de la page pour écran d'ordinateur -->
+        <div class="choosePagePC">  <!-- first-of-type = balise gauche -->
+            <a href='modelisation-3D.html'><</a>
+            <p>La modélisation 3D</p>
+        </div>
+
+        <div class="choosePagePC">  <!-- last-of-type = balise droite -->
+            <a href='fused-deposition-modeling.html'>></a>
+            <p>Dépot de matière fondue</p>
+        </div>
+        <!-- Fin balise choix de la page pour écran d'ordinateur -->
+
+        </div>
+
+        <footer>
+            <div id="footerTitle"><h1>L'impression</h1> <h2>3D</h2></div>
+            <p>TPE de première S par Julien Marconnet | Année scolaire : 2015 - 2016</p>
+            <p> Thème : Matière & forme | Discipline : Physique-chimie & mathématique</p>
+        </footer>
+
+    </body>
+</html>

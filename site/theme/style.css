@@ -1,0 +1,597 @@
+@font-face { font-family: 'Exo';  src: url(./fonts/Exo/Exo-Regular.otf); }
+@font-face { font-family: 'Exo-Bold'; src: url(./fonts/Exo/Exo-Bold.otf); }
+@font-face { font-family: 'Asap'; src: url(./fonts/Asap/Asap-Medium.ttf); }
+@font-face { font-family: 'Noto'; src: url(./fonts/Noto/NotoSans-Regular.ttf); }
+@font-face { font-family: 'Noto-Mono'; src: url(./fonts/Noto/NotoMono-Regular.ttf); }
+@font-face { font-family: 'Geo'; src: url(./fonts/GeoSans-Light.ttf); }
+
+/* Permet de positionner correctement l'ensemble des éléments. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Définit une valeur fixe pour la hauteur de la page */
+html {
+    height: 100%;
+}
+
+/* Définition du style de la page */
+
+body {
+    background-color: #F1F1F1;
+
+    min-height: 100%;
+    position: relative; /* Permet de positionner le pied de page */
+    padding-bottom: 8em; /* Évite que le pied de page ne déborde sur les blocs plus haut */
+    box-sizing: border-box;
+}
+
+/* Définition du style de l'en-tête de la page */
+
+header {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 100%;
+    height: 6em;
+
+    background-color: #fff;
+    font: lighter 1.2em 'Exo';
+    border-bottom: solid 1em #FEA85B;
+}
+
+header > #firstTitle, header > #secondTitle {
+    color: #EDD9C2;
+
+    flex-basis: 15%;
+}
+header > #firstTitle {
+    text-align: right;
+    align-self: flex-end;
+
+    padding-right: .6em;
+}
+header > #secondTitle {
+    align-self: flex-start;
+
+    padding-top: 1.5em;
+    padding-left: .6em;
+}
+header > #firstTitle > h1 {
+    color: #CDCDCD;
+    text-shadow: -.05em .15em 0 #F7F7F7;
+
+    padding-bottom: .15em;
+}
+header > #secondTitle > h2 {
+    color: #FEA85B;
+    font-size: 2em;
+    text-shadow: -.05em .15em 0 #FEDFC3;
+
+    align-self: flex-end;
+}
+
+#borderLeft {
+    color: #FEA85B;
+    border-top: solid .7em #FEA85B;
+
+    flex-basis: 35%;
+    transform: rotate(48deg);
+}
+#borderRight {
+    color: #FEA85B;
+    border-bottom: solid .7em #FEA85B;
+
+    flex-basis: 35%;
+    transform: rotate(128deg);
+}
+
+/* Fin définition du style de l'en-tête de la page */
+
+/* Définition du style des diverses balises de navigation (navigation, groupe de liste, liste, lien) */
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #fff;
+    border-bottom: solid .8em #FEDFC3;
+}
+ul {
+    display: flex;
+
+    list-style: none;
+}
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+
+    color: #9C9C9C;
+    font: normal 1.2em 'Exo';
+}
+
+/* Fin définition du style des diverses balises de navigation */
+
+
+/* Définition du style du bloc navigation */
+
+nav > ul {
+    height: 100%;
+}
+
+nav > ul > li, .submenu > li {
+    flex-grow: 1;
+
+    color: #9C9C9C;
+    font-family: 'Exo';
+
+    border-right: solid .1em #E7E7E7;
+}
+nav > ul > li:first-of-type {
+    border-left: solid .1em #E7E7E7;
+}
+
+nav > ul .submenu {
+    flex-flow: row wrap;
+}
+
+ /* Il s'agit du titre du sous-menu */
+.submenu > li:first-of-type {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: #EDD9C2;
+    font-family: 'Exo';
+
+    border-right: none;
+    border-bottom: solid .1em #E7E7E7;
+}
+
+.submenu > li:last-of-type {
+    border-right: none;
+}
+
+nav a {
+    padding: 0 .4em
+}
+
+#active {
+    border-color: #FEDFC3;
+    background-color: #FEDFC3;
+}
+#active > a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Fin définition du style du bloc navigation */
+
+/* Définition de style des balises universelles */
+
+p, td {
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+em {
+    position: relative; /* Permet de faire apparaître un vecteur au dessus des balises em */
+
+    color: #FEA85B;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+/* Fin définition de style des balises universelles */
+
+/* Définition des balises de couleur */
+
+.blue { color: blue; }
+.red { color: red; }
+.green { color: green; }
+
+/* Fin définition des balises de couleur */
+
+/* Définition des balises vecteur */
+
+.vecteur {
+    position: absolute;
+    top: -.95em;
+    left: -.25em;
+}
+.vecteur.OS {
+    top: -.75em;
+    left: .05em;
+
+    font-size: 1.4em;
+}
+
+/* Fin définition des balises vecteur */
+
+/* Définition du style des cellules de tableau */
+
+th { font-family: sans-serif; }
+tr > td { padding: .2em 1em .2em 1em; }
+tr > td:not(:last-of-type) { text-align: center; }
+
+/* Fin définition du style des cellules de tableau */
+
+/* Définition du bloc central du site (article & choosePagePC) */
+
+#pageBlock {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+/* Fin définition du bloc central du site */
+
+/* Définition du style du bloc article */
+
+article {
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    background-color: #fff;
+    border: solid .05em #e7e7e7;
+
+    order: 0;
+}
+
+/* Fin définition du style du bloc article */
+
+/* Définition du style de l'en-tête du bloc article */
+
+#articleHeader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+
+    border-top: solid 1em #FEA85B;
+}
+
+#articleTitles {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+
+    margin-top: 1.4em;
+    margin-left: 1.2em;
+}
+
+#articleTitles > h1 {
+    color: #CDCDCD;
+    font: normal 2rem 'Exo';
+    text-shadow: -.05em .15em 0 #F7F7F7;
+
+    min-width: 80%;
+    max-width: 100%;
+
+    margin-top: 1.4rem;
+}
+
+#articleTitles > #firstLetter {
+    font: italic 3.4rem 'Exo';
+    height: 100%;
+}
+
+#articleTitles > #firstLetter, article > h4:first-letter {
+    color: #FEA85B;
+    text-shadow: -.05em .13em 0 #FEDFC3;
+    letter-spacing: .08em;
+}
+
+#articleTitles > h2 {
+    color: #FDB06B;
+    font: normal .9em 'Asap';
+}
+
+#articleHeader > img {
+    width: 15%;
+    height: auto !important;
+
+  margin: auto;
+  margin-right: 2em;
+  margin-top: 1.6em;
+
+  border: solid .4em #FEA85B;
+  border-radius: .3em;
+}
+#articleHeader > img[data-info~="horizontal"] {
+    width: 30%;
+}
+
+/* Fin définition du style de l'en-tête du bloc article */
+
+/* Définition du style des titres du bloc article */
+
+article > h3, article > h4 {
+    flex-basis: auto;
+    align-self: center;
+    text-align: center;
+
+    font: normal 1.3em 'Noto';
+    border-top: solid .2em #EEEEEE;
+
+    margin-top: 1.2em;
+    padding-top: 1.2em;
+}
+article > h3:first-of-type {
+    margin-top: 2em;
+}
+article > h4 {
+    text-shadow: -.05em .15em 0 #D9D9D9;
+}
+article > h4:first-letter {
+    font: italic 1.88em 'Exo';
+}
+
+/* Fin définition du style des titres du bloc article */
+
+/* Définition du style des paragraphes du bloc article */
+
+article > p {
+    align-self: center;
+
+    margin-top: .8em;
+    line-height: 1.6em;
+    padding: .3em .7em .3em .7em;
+}
+article > p:last-of-type{
+    padding-bottom: 1.5em;
+}
+/* Fin définition du style des paragraphes du bloc article */
+
+/* Définition du style des boîtes de texte  */
+
+article > pre, article > .box, code {
+    color: #424242;
+    background-color: #F1F1F1;
+}
+
+article > pre {
+    align-self: center;
+    margin: 1em 0;
+    line-height: 160%;
+
+
+    font-family: 'Noto-Mono';
+    border: solid .5em #F1F1F1;
+}
+
+article > .box {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 1em 0;
+    min-width: 20%;
+    max-width: 80%;
+    height: auto !important;
+
+    font-size: .9em;
+    border: solid .2em #F1F1F1;
+}
+article > .box[data-info="image"] { width: 50%; }
+article > .box[data-info~="horizontal"] { width: 70%; }
+
+/* Met l'entièreté du padding à .2em quand il s'agit de citation ou d'une description d'image */
+article > .box > p:last-of-type:nth-child(2), article > .box > p:first-of-type:nth-last-child(2) {
+    padding: .2em;
+}
+article > .box > p {
+    text-align: center;
+    padding: .2em .4em;
+}
+
+/* Centre le texte de la boîte et adapte sa marge s'il se trouve sous une image ou une citation */
+article > .box img + p, article > .box > p:nth-of-type(2):last-of-type {
+    margin: .6em;
+
+    text-align: center;
+}
+
+/* Centre la citation */
+article > .box > p:first-of-type:nth-last-child(2) {
+    text-align: center;
+}
+
+/* Permet de conserver le ratio de l'image */
+article > .box img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+}
+
+code {
+    font-family: 'Noto-Mono';
+}
+
+
+/* Fin définition du style des boîtes de texte */
+
+/* Définition du style des matrices */
+
+.matrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.matrice > p[data-info="parenthese"] {
+    font: normal 8rem 'Geo';
+}
+.matrice > p:not([data-info="parenthese"]) {
+    margin: 1.1rem;
+
+    font-size: 1.6em;
+}
+
+.matrice > .number {
+    display: flex;
+    flex-direction: row;
+}
+.matrice > .number > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1.20rem;
+    text-align: center;
+}
+.matrice > .number > p > span {
+    padding: .2em;
+}
+
+/* Fin définition du style des matrices */
+
+/* Définition du style du sélecteur de page pour grand écrans (PC) */
+
+.choosePagePC {
+    display: flex;
+    flex-basis: 22.55555%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.choosePagePC:first-of-type {
+    order: -1;
+}
+.choosePagePC:last-of-type {
+    order: 1;
+}
+.choosePagePC > p {
+    font: normal .95em 'Noto';
+    padding: .4em .7em .4em .7em;
+}
+
+.choosePagePC > a, #choosePageTab > a {
+    color: #FEA85B;
+    font: italic 6rem 'Exo';
+    text-shadow: -.02em .05em 0 #FEDFC3;
+
+    line-height: .6em;
+}
+
+/* Fin définition du style du sélecteur de page pour grand écrans */
+
+/* Définition du style du sélecteur de page pour petit écran (Tablette, Portalbe) */
+
+#choosePageTab {
+    display: none;
+    justify-content: center;
+}
+
+#choosePageTab > a {
+    padding-bottom: .2em;
+    margin: 0 2em;
+}
+/* Fin définition du style du sélecteur de page pour petit écran */
+
+/* Définition du style du pied de page */
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    padding: .6em 0 .6em 0;
+
+    background-color: #FFF;
+    border-top: solid .4em #FEA85B;
+}
+
+#footerTitle {
+    display: flex;
+}
+
+#footerTitle > h1, #footerTitle > h2 {
+    font: normal 1.4em 'Exo';
+    text-shadow: -.05em .15em 0 #F7F7F7;
+}
+#footerTitle > h1 { color: #CDCDCD; }
+#footerTitle > h2 { color: #FEA85B;  margin-left: .3em; }
+
+footer > p {
+    margin-top: .4em;
+    padding-top: .4em;
+
+    color: #2E3436;
+    font-size: .8em;
+}
+footer > p:first-of-type {
+    border-top: solid .1em #e7e7e7;
+}
+
+/* Fin définition du style du pied de page */
+
+/* Définition de style spécifique aux petits écrans (<=80em) */
+
+@media screen and (max-width: 80em) {
+    ul { flex-direction: column; }
+
+    nav > ul > li:first-of-type {
+        border-left: none;
+    }
+    nav > ul > li, .submenu > li {
+        font-size: 2.2em;
+
+        padding: 0.2em 0;
+        border-right: none;
+    }
+
+    .submenu { margin: 0.5em 0; }
+    .submenu > li {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #articleTitles > #firstLetter, article > h4::first-letter { font-size: 6rem; }
+    #articleTitles > h1 { font-size: 3.5rem; }
+    #articleTitles > h2 { font-size: 1.6rem; }
+    #articleHeader > img{ width: 25%; }
+
+    article {
+        flex-basis: 100%;
+
+        border: initial;
+        border-top: solid .09em #e7e7e7;
+        border-bottom: solid .09em #e7e7e7;
+
+        font-size: 2.3em;
+    }
+    article > h3, article > h4 {
+        font-size: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    article > .box[data-info~="horizontal"] { width: 80%; }
+    article > .matrice > p:not([data-info="parenthese"]) { font-size: 2.8vw; }
+    article > .matrice > p[data-info="parenthese"] { font-size: 13.2vw; }
+    article > .matrice > .number > p { font-size: 1.80vw; }
+
+    .choosePagePC { display: none; }
+    #choosePageTab { display: flex; }
+
+    #footerTitle > h1, #footerTitle > h2 { font-size: 1.8rem; }
+    footer > p { font-size: 1.4rem }
+}
+
+/* Fin définition de style spécifique aux petits écrans */

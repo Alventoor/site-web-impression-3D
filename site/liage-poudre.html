@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href='theme/style.css' />
+        <title>TPE - L'impression 3D par liage de poudre</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="borderLeft"></div>
+            <div id="firstTitle"><h1>L'impression</h1>TPE 2015-2016</div>
+            <div id="secondTitle">Première S<h2>3D</h2></div>
+            <div id="borderRight"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li><a href='modelisation-3D.html'> La modélisation 3D</a></li>
+                <li>
+                    <ul class="submenu">
+                        <li>L'impression 3D par:</li>
+                        <li><a href='photo-polymerisation.html'>Photo-polymérisation</a></li>
+                        <li><a href='fused-deposition-modeling.html'>Dépôt de matière fondue</a></li>
+                        <li id="active"><a>Liage de poudre</a></li>
+                    </ul>
+                </li>
+                <li><a href='nouvelles-possibilites.html'>De nouvelles possibilités</a></li>
+                <li><a href='annexes.html'>Annexes</a></li>
+            </ul>
+        </nav>
+
+        <div id="pageBlock">
+        <article>
+            <div id="articleHeader">
+                <div id="articleTitles">
+                    <span id="firstLetter">L</span>
+                    <h1>iage de poudre</h1>
+                    <h2>L'impression 3D par</h2>
+                </div>
+                <img src='images/LP/poudre-métallique.jpg' alt="Poudre Métal Métallique"/>
+            </div>
+            
+            <p>Tout comme la fabrication additive par photo-polymérisation, l'impression 3D par liage de poudre ne représente pas un unique procédé de fabrication
+                additive, mais tout un ensemble exploitant la matière sous un même état, celle de poudre.<p>
+
+            <p>La plupart de ses techniques exploitent un puissant laser qui va servir à provoquer la fusion puis la consolidation de la poudre. Celles-ci possèdent
+                ainsi l'avantage d'être compatible avec une grande variété de matériau tel le plastique, la céramique, ou encore le verre. Cependant, l'intérêt de ces
+                techniques réside aussi dans le fait que ce sont les premières à être capable d'imprimer en métal.</p>
+
+        <h3>Le frittage laser</h3>
+
+            <p>La fabrication additive par frittage laser désigne deux procédés de fabrication, le <em>SLS</em>, pour Selective Laser Sintering, et le
+                <em>DMLS</em>, pour Direct Metal Laser Sintering. La première technique de frittage laser fut développée dans le milieu des années 80 par
+                Dr. Carl Deckard et Dr. Joseph Beaman et brevetée par DTM Corporation. Le brevet revint ensuite à 3D Systems lors du rachat de DTM Corporation par
+                ce dernier en 2001 avant de tomber dans le domaine public le 28 janvier 2014. Quant à la seconde, elle vît son développement commencer bien plus tôt,
+                dans les années 70. Cependant, tout comme la première, elle ne fut brevetée qu'en 1994, par la société allemande EOS. Finalement, ces deux techniques
+                fonctionnent exactement de la même façon, la seule différence étant au niveau du laser utilisé qui, dans le cas du frittage laser direct de métal,
+                est à fibre optique afin de posséder la puissance nécessaire à la température de fusion du métal.</p>
+
+            <p>Le frittage laser propose un résultat de meilleure qualité que le dépôt de matière fondue, avec une épaisseur de couche pouvant aller de 100 à 20
+                micromètres et des pièces finales respectant les plus hautes exigences des matériaux telle la résistance mécanique et la résistance chimique à la
+                température. Cependant, les objets imprimés peuvent être d'aspect sableux et assez rugueux au toucher, il arrive aussi que le résultat soit poreux
+                selon le matériau choisi. Afin de minimiser ces défauts il est nécessaire, avant l'impression, de prendre en compte un certain nombre de paramètrse,
+                comme la régularité du grain de la poudre, la longueur d'onde du laser et l'optimisation de la pièce au sein du logiciel de slicing. Une fois
+                l'impression terminée, il est possible d'effectuer diverses finitions externes afin de faire disparaître l'aspect brut de la pièce.</p>
+
+            <div class="box" data-info="image">
+                <a href='images/LP/echangeur_chaleur_automobile_dmls.png'><img src='images/LP/echangeur_chaleur_automobile_dmls.png' alt="Échangeur Chaleur Automobile Frittage Laser DMLS"/></a>
+                <p>Échangeur de chaleur d'automobile, imprimé par frittage laser direct de métal<br/>(Source : EOSAutomotive)</p>
+            </div>
+
+            <p>Le frittage laser direct de métal est ainsi capable d'imprimer en théorie tous types de métaux purs, mais aussi d'alliages, à la seule condition
+                qu'ils soient réduits à l'état de poudre homogène. Il est donc actuellement possible de retrouver des pièces imprimées en cobalt-chrome, acier
+                inoxydable, acier maraging, inconel, titane ou aluminium. De plus, la résistance des pièces obtenues est aujourd'hui comparable à celle obtenue par
+                des techniques de fonderie ou d'usinage, ce qui a permis au frittage laser direct de métal d'être exploité pour la production dans les domaines de
+                l'aérospatial, l'automobile, et du médical. Le frittage sélectif par laser ne déroge pas à la règle, et sa grande polyvalence dans le choix des
+                matériaux, ajoutée à la création de pièces fonctionnelles, lui a permis d'être exploité à des fins de production dans les mêmes domaines.</p>
+
+            <h3>Fonctionnement d'une impression par frittage laser</h3>
+
+            <p>Le fonctionnement d'une impression par frittage laser est très proche de celui par photo-polymérisation, à l'exception que le matériau de base se
+                présente sous forme de poudre et non de liquide. La plateforme où se réalise l'impression est composée de deux cuves, chacune activées par un
+                piston sur l'axe Z. Au début de l'impression, la première cuve, remplis de poudre, se situe au plus bas de l'axe Z tandis que la seconde, vide, se
+                situe à même hauteur que la plateforme. Le procédé d'impression débute alors par le transfert d'une fine couche de poudre de la première cuve à la
+                seconde grâce à un système de raclage. La couche déposée est alors balayée par le faisceau laser, provoquant la fusion de celle-ci. Une fois la
+                matière consolidée, la première cuve monte d'un niveau tandis que la seconde en descend un, puis une deuxième couche de poudre est appliquée, et
+                ainsi de suite jusqu'à l'obtention de la pièce finale.</p>
+
+            <div class="box" data-info="image">
+                <a href='images/LP/sls_dmls.png'><img src='images/LP/sls_dmls.png' alt="Schémas Impression 3D SLS DMLS"/></a>
+                <p>Schémas d'une impression 3D par frittage laser<br/>(Source : 3dnatives.com)</p>
+            </div>
+
+            <p>Certains modèles d'imprimante 3D sont équipés de deux cuves servant à abriter la poudre, chacune positionnée d'un côté de la cuve accueillant la
+                pièce. Cela permet au système de raclage de ces modèles d'éviter de retourner à sa position initiale quand il doit étaler la poudre. Accélérant
+                ainsi l'impression.</p>
+
+            <!-- Début balise choix de la page pour écran de tablette -->
+            <div id="choosePageTab">
+                <a href='fused-deposition-modeling.html'><</a>
+                <a href='nouvelles-possibilites.html'>></a>
+            </div>
+            <!-- Fin balise choix de la page pour écran de tablette -->
+
+        </article>
+
+    <!-- Début balise choix de la page pour écran d'ordinateur -->
+        <div class="choosePagePC">  <!-- first-of-type = balise gauche -->
+            <a href='fused-deposition-modeling.html'><</a>
+            <p>Dépot de matière fondue</p>
+        </div>
+
+        <div class="choosePagePC">  <!-- last-of-type = balise droite -->
+            <a href='nouvelles-possibilites.html'>></a>
+            <p>De nouvelles possibilités</p>
+        </div>
+        <!-- Fin balise choix de la page pour écran d'ordinateur -->
+
+        </div>
+
+        <footer>
+            <div id="footerTitle"><h1>L'impression</h1> <h2>3D</h2></div>
+            <p>TPE de première S par Julien Marconnet | Année scolaire : 2015 - 2016</p>
+            <p> Thème : Matière & forme | Discipline : Physique-chimie & mathématique</p>
+        </footer>
+
+    </body>
+</html>

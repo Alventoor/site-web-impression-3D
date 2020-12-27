@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href='theme/style.css' />
+        <title>TPE - La modélisation 3D</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="borderLeft"></div>
+            <div id="firstTitle"><h1>L'impression</h1>TPE 2015-2016</div>
+            <div id="secondTitle">Première S<h2>3D</h2></div>
+            <div id="borderRight"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href='index.html'>Accueil</a></li>
+                <li id="active"><a> La modélisation 3D</a></li>
+                <li>
+                    <ul class="submenu">
+                        <li>L'impression 3D par:</li>
+                        <li><a href='photo-polymerisation.html'>Photo-polymérisation</a></li>
+                        <li><a href='fused-deposition-modeling.html'>Dépôt de matière fondue</a></li>
+                        <li><a href='liage-poudre.html'>Liage de poudre</a></li>
+                    </ul>
+                </li>
+                <li><a href='nouvelles-possibilites.html'>De nouvelles possibilités</a></li>
+                <li><a href='annexes.html'>Annexes</a></li>
+            </ul>
+        </nav>
+
+        <div id="pageBlock">
+        <article>
+            <div id="articleHeader">
+                <div id="articleTitles">
+                    <span id="firstLetter">L</span>
+                    <h1>a tridimensionnalité</h1>
+                    <h2>Base de la modélisation 3D</h2>
+                </div>
+                <img src='images/M3D/main_droite.png' alt="Repère Main Droite"/>
+            </div>
+            
+            <p>Avant d'être imprimé en 3D, l'objet doit exister sous la forme d'un fichier numérique lisible par l'imprimante. Il existe différents formats de
+                fichiers, dépendant de l'imprimante utilisée, et offrants diverses possilités comme celle d'appliquer différentes textures ou matériaux à une même
+                pièce. Cependant, ces fichiers possèdent tous un point commun, celui de contenir l'objet souhaité sous la forme d'un ensemble de <em>polygones</em>.</p>
+
+            <p>Un ensemble de polygones est une figure géométrique constituée uniquement de sommets et d'arêtes servant à former les facettes de celle-ci. Ces
+                trois termes servent à désigner, dans le domaine de la modélisation 3D, les points, les segments et les polygones. Du fait de sa structure
+                géométrique, un modèle polygonal tridimensionnel se situe dans un espace de dimension 3 possédant un repère (<em>O</em>,
+                <em><var>i</var><span class="vecteur">&rarr;</span></em>, <em><var>j</var><span class="vecteur">&rarr;</span></em>,
+                <em><var>k</var><span class="vecteur">&rarr;</span></em>). En outre, chaque sommet de la figure se voit assigner un unique triplet de réel
+                (<em>x</em>, <em>y</em>, <em>z</em>) appelé coordonnées cartésiennes du sommet dans le repère
+                (<em>O</em>, <em><var>i</var><span class="vecteur">&rarr;</span></em>, <em><var>j</var><span class="vecteur">&rarr;</span></em>,
+                <em><var>k</var><span class="vecteur">&rarr;</span></em>). Celui-ci permet ainsi de situer un sommet S dans l'espace à l'aide de l'écriture
+                vectorielle : <em>OS<span class='vecteur OS'>&rarr;</span></em> = (<em>x</em><em><var>i</var><span class="vecteur">&rarr;</span></em> ; <em>y</em>
+                <em><var>j</var><span class="vecteur">&rarr;</span></em> ; <em>z</em><em><var>k</var><span class="vecteur">&rarr;</span></em>)</p>
+
+            <p>Si cette description correspond à la base de la tridimensionnalité, une règle bien précise doit cependant être respectée afin de s'assurer que le
+                modèle numérique représente bien l'objet sous sa forme réelle. Effectivement, le repère doit toujours être orthonormé. Ainsi, pour qu'un repère
+                soit orthonormé, ses axes <em>x</em>, <em>y</em>, <em>z</em> doivent être perpendiculaires entre eux - repère orthogonal -
+                tandis que ses vecteurs <em><var>i</var><span class="vecteur">&rarr;</span></em> ,  <em><var>j</var><span class="vecteur">&rarr;</span></em> ,
+                <em><var>k</var> <span class="vecteur">&rarr;</span></em> doivent posséder la même valeur.</p>
+
+            <h3>La Conception Assistée par Ordinateur - CAO</h3>
+
+            <p>Afin d'obtenir le modèle 3D nécessaire à l'impression, il est possible de se servir d'un scanner 3D qui analysera l'objet souhaité afin d'acquérir
+                les informations nécessaires - forme, couleur, texture - à la construction d'une version numérique de celui-ci. Cependant l'achat d'un scanner 3D
+                est coûteux et il arrive souvent que le résultat soit peu précis. En outre, l'objet souhaité peut ne pas encore exister. Pour ces cas-là, il est
+                possible d'utiliser un logiciel de CAO tel que Blender ou Autodesk 3ds max, afin de créer une version numérique de l'objet de A à Z. Cette méthode
+                ne présente aucun défaut, si ce n'est la nécessité de posséder des connaissances en modélisation 3D qu'il peut être long à acquérir.</p>
+
+            <div class="box" data-info="horizontal image">
+                <a href='images/M3D/blender_toolbox.png'><img src='images/M3D/blender_toolbox.png' alt="Blender Mini Tool Box"/></a>
+                <p>Interface du logiciel blender avec l'affichage d'un solide et de ses arrêtes<br/> (Auteur du modèle 3D : Denovator)</p>
+            </div>
+
+            <p>Une fois que le modèle numérique souhaité est obtenu, il ne reste plus qu'à l'exporter au format d'un fichier de CAO. Il faut cependant être prudent
+            dans le choix de ce dernier, car la prise en charge des différents formats dépend de l'imprimante utilisée. Heureusement les formats Objet 3D -
+            .ob, ainsi que STL - . stl, sont aujourd'hui devenus des standards compréhensibles par toutes les imprimantes 3D.</p>
+
+            <h3>Fichier de Stéréolithographie</h3>
+
+            <p>Le format de fichier STL, pour STereoLitography, a été conçu spécialement pour l'impression 3D par la société 3D Systems. Il permet ainsi de définir
+                la géométrie de surface d'un objet numérique en trois dimensions. Ce format peut exister sous forme d'un fichier codé en ASCII ou sous forme d'un
+                fichier binaire. Dans le cas d'un fichier binaire les bits contenus ne représentent pas forcément une suite de caractères, ce qui permet un fichier
+                plus léger mais aussi uniquement compréhensible par l'ordinateur. L'avantage des fichiers codés en ASCII réside justement dans le fait d'être
+                entièrement compréhensible par l'Homme. La structure de ces fichiers est toujours constituée de la même façon :</p>
+
+<pre>
+solid <em>name</em>
+    facet normal <em>n<sub>i</sub> n<sub>j</sub> n<sub>k</sub></em>
+        outer loop
+            vertex <em>v1<sub>x</sub> v1<sub>y</sub> v1<sub>z</sub></em>
+            vertex <em>v2<sub>x</sub> v2<sub>y</sub> v2<sub>z</sub></em>
+            vertex <em>v3<sub>x</sub> v3<sub>y</sub> v3<sub>z</sub></em>
+        endloop
+    endfacet
+endsolid
+</pre>
+
+            <p>Le fichier commence avec la ligne <code>solid <em>name</em></code> où name est une chaîne facultative correspondant au nom du solide. Il se
+                poursuit ensuite avec les déclarations des facettes, <code>facet normal</code>, et de leurs sommets, <code>outer loop</code>. La première est ainsi
+                suivie des valeurs <code><em>n<sub>i</sub> n<sub>j</sub> n<sub>k</sub></em></code> correspondant aux vecteurs <em><i>i</i><span class="vecteur">&rarr;</span></em>,
+                <em><i>j</i><span class="vecteur">&rarr;</span></em>, <em><i>k</i><span class="vecteur">&rarr;</span></em> du repère de la facette.
+                La seconde déclaration contient trois lignes, <code>vertex <em>v1<sub>x</sub> v1<sub>y</sub> v1<sub>z</sub></em> ;
+                vertex <em>v2<sub>x</sub> v2<sub>y</sub> v2<sub>z</sub></em> ; vertex <em>v3<sub>x</sub> v3<sub>y</sub> v3<sub>z</sub></em></code>,
+                correspondant respectivement aux coordonnées <em>x</em>, <em>y</em>, <em>z</em> du premier, second et troisième sommet de la facette. Une fois ces
+                trois lignes passées, <code>endloop</code> permet de signaler la fin de celles-ci, tandis que <code>endfacet</code> signale la fin de toutes les
+                déclarations de la facette et <code>endsolid</code> la fin de toutes les déclarations du solide.</p>
+
+            <p>Exemple : un simple triangle</p>
+
+<pre>
+solid <em>triangle</em>
+    facet normal <em>1 1 1</em>
+        outer loop
+           vertex <em>0 0 0</em>
+            vertex <em>0 .5 1</em>
+            vertex <em>1 .5 0</em>
+        endloop
+    endfacet
+endsolid
+</pre>
+
+            <h3>La fabrication assistée par ordinateur - FAO</h3>
+
+            <p>Maintenant que le fichier contenant le modèle de l'objet à imprimer est obtenu, il est nécessaire d'utiliser un logiciel de fabrication assistée par
+                ordinateur, souvent fourni avec l'imprimante 3D, afin de convertir son contenu en données compréhensibles par la machine. Les logiciels permettant
+                d'effectuer ce type d'opération sont appelés logiciels de tranchage dans le cas de l'impression 3D. Ils permettent à l'utilisateur de régler les
+                différentes caractéristiques de l'objet - épaisseur de ses parois, nombre de couches, position sur le plateau, taille, ainsi que les paramètres de
+                l'imprimante avant de générer le fichier de FAO utilisable par celle-ci. Leur nom provient ainsi du fait que le logiciel « tranche » le modèle
+                numérique en plusieurs couches horizontales qui seront ensuite imprimées par la machine.</p>
+
+            <div class="box" data-info="horizontal image">
+            <a href='images/M3D/slic3r_toolbox.png'><img src='images/M3D/slic3r_toolbox.png' alt="Slic3r Mini Tool Box"/></a>
+            <p>Interface du logiciel Slic3r avec l'affichage de l'objet sur le plateau d'impression<br/>(Auteur du modèle 3D : Denovator)</p>
+            </div>
+
+
+            <h3>Transformation géométrique au niveau matriciel</h3>
+
+            <p>Afin de régler la taille de l'objet et sa position sur le plateau, les logiciels de tranchage utilisent trois transformations géométriques : la
+                <em>translation</em>, l'<em>homothétie</em> et la <em>rotation</em>. Pour pouvoir réaliser ces actions au sein d'un
+                logiciel, chacune d'entre elles s'est vu attribuer une <em>matrice</em>. Une matrice est un objet mathématique représenté comme un tableau
+                de nombres composé de <em><i>n</i></em> lignes et <em><i>m</i> </em> colonnes. Tout comme avec les nombres et les vecteurs, il est
+                possible d'effectuer certaines opérations mathématiques sur les matrices dont la multiplication. Cependant, lorsque nous multiplions des matrices
+                entre elles, nous multiplions des colonnes par des lignes. Il est donc possible de multiplier une matrice <em>A</em> par une matrice
+                <em>B</em> uniquement si le nombre de colonnes de <em>A</em> est égal au nombre de lignes de <em>B</em>. De plus, la
+                multiplication entre matrices n'est pas commutative, l'ordre des multiplications est donc important. Un vecteur n'étant qu'un cas particulier de
+                matrice avec une seule colonne, il est alors possible de le multiplier par une matrice tant qu'elle se trouve à sa gauche. Le résultat sera alors
+                un second vecteur.</p>
+
+            <p>Exemple : multiplication d'une matrice par un vecteur</p>
+
+            <div class="matrice">
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span class="blue">5</span><span class="blue">2</span><span class="blue">3</span></p>
+                <p><span class="red">8</span><span class="red">2</span><span class="red">6</span></p>
+                <p><span class="green">2</span><span class="green">5</span><span class="green">8</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>x</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span class="blue">7</span><span class="red">3</span><span class="green">9</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span class="blue">(5*7)</span><span class="blue">(2*7)</span><span class="blue">(3*7)</span></p>
+                <p><span>+</span><span>+</span><span>+</span></p>
+                <p><span class="red">(8*3)</span><span class="red">(2*3)</span><span class="red">(6*3)</span></p>
+                <p><span>+</span><span>+</span><span>+</span></p>
+                <p><span class="green">(2*9)</span><span class="green">(5*9)</span><span class="green">(8*9)</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span>77</span><span>65</span><span>111</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            </div>
+
+            <p><br/>La translation est l'une des transformations géométriques utilisables par les logiciels de tranchage. Elle est très pratique, car elle permet
+                de déplacer un point ou un ensemble de points au sein de l'espace géométrique. Ainsi, un vecteur est désigné afin de servir de rail sur lequel les
+                différents points glisseront. Dans le cas où l'intégralité des points est déplacée, la position de la figure géométrique est changée sans en altérer
+                sa forme. Une translation de (<em>X</em>, <em>Y</em>, <em>Z</em>) s'écrit matriciellement :</p>
+
+            <div class="matrice">
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span>1</span><span>0</span><span>0</span><span>0</span></p>
+                <p><span>0</span><span>1</span><span>0</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>1</span><span>0</span></p>
+                <p><span><em>X</em></span><span><em>Y</em></span><span><em>Z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>x</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>x</em></span><span><em>y</em></span><span><em>z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>x</em></span><span><em>y</em></span><span><em>z</em></span><span>&nbsp;</span></p>
+                <p><span>+</span><span>+</span><span>+</span><span>1</span></p>
+                <p><span><em>X</em></span><span><em>Y</em></span><span><em>Z</em></span><span>&nbsp;</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            </div>
+
+            <p>Ainsi, en effectuant la multiplication d'un vecteur quelconque (<em>x</em>, <em>y</em>, <em>z</em>) par cette matrice de
+                translation, le résultat obtenu correspond à un second vecteur image du premier vecteur par cette translation. Afin de déplacer un point, il suffit
+                alors de multiplier la matrice de translation par un vecteur égal aux coordonnées de celui-ci. Le résultat correspondra alors aux coordonnées d'un
+                second point qui ne sera ni plus ni moins l'image du premier point par la matrice de translation.</p>
+
+            <p><br/>L'homothétie, seconde transformation géométrique utilisable par les logiciels de tranchage, est elle aussi très utile, car elle permet de
+                changer l'échelle du modèle numérique, afin d'obtenir une pièce plus petite ou plus grande. Une homothétie de (<em>X</em>, <em>Y</em>, <em>Z</em>)
+                s'écrit matriciellement : </p>
+
+            <div class="matrice">
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>X</em></span><span>0</span><span>0</span><span>0</span></p>
+                <p><span>0</span><span><em>Y</em></span><span>0</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span><em>Z</em></span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>0</span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>x</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>x</em></span><span><em>y</em></span><span><em>z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>Xx</em></span><span><em>Yy</em></span><span><em>Zz</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            </div>
+
+            <p>Pour changer l'échelle d'un objet numérique, il suffit donc de multiplier l'ensemble de ses points par une même matrice d'homothétie dont ses trois
+                valeurs (<em>X</em>, <em>Y</em>, <em>Z</em>) sont égales. Il en résultera alors comme résultat des points aux coordonnées
+                plus petites et ainsi plus proches ou des points aux coordonnées plus grandes et ainsi plus éloignées sans altérer la forme de l'objet.</p>
+
+            <p><br/>La rotation, dernière transformation géométrique utilisable par les logiciels de tranchage, permet de faire pivoter un point ou un ensemble de
+                points d'un angle thêta autour d'un axe. Ainsi une rotation autour d'un axe quelconque (<em>X</em>, <em>Y</em>, <em>Z</em>)
+                s'écrit matriciellement :</p>
+
+            <div class="matrice">
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>XX</em>(1 - cos(θ)) + cos(θ)</span><span><em>XY</em>(1 - cos (θ)) + <em>Z</em>sin(θ)</span><span><em>XZ</em>(1 - cos(θ)) - <em>Y</em>sin(θ)</span><span>0</span></p>
+                <p><span><em>XY</em>(1 - cos(θ)) - <em>Z</em>sin(θ)</span><span><em>YY</em>(1 - cos(θ)) + cos(θ)</span><span><em>YZ</em>(1 - cos(θ)) + <em>X</em>cos(θ)</span><span>0</span></p>
+                <p><span><em>XZ</em>(1 - cos(θ)) + <em>Y</em>sin(θ)</span><span><em>YZ</em>(1 - cos(θ)) - <em>X</em>sin(θ)</span><span><em>zZ</em>(1 - cos(θ)) + cos(θ)</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>0</span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            </div>
+
+            <p>Si cette matrice paraît compliquée, c'est parce qu'elle correspond au cas le plus général qu'il soit. De ce fait, dans le cas d'une rotation de 90°
+                autour de l'axe Z (0, 0, 1) appliquée à un vecteur quelconque (<em>x</em>, <em>y</em>, <em>z</em>), tout ce qui concerne
+                <em>X</em> et <em>Y</em> s'en va. L'écriture matricielle correspond donc à :</p>
+
+            <div class="matrice">
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span>cos (90)</span><span>sin(90)</span><span>0</span><span>0</span></p>
+                <p><span>-sin(90)</span><span>cos(90)</span><span>0</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>1</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>0</span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>x</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>x</em></span><span><em>y</em></span><span><em>z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span>0</span><span>1</span><span>0</span><span>0</span></p>
+                <p><span>-1</span><span>0</span><span>0</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>1</span><span>0</span></p>
+                <p><span>0</span><span>0</span><span>0</span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>x</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span><em>x</em></span><span><em>y</em></span><span><em>z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            <p>=</p>
+            <p data-info="parenthese">(</p>
+            <div class="number">
+                <p><span>1<em>x</em></span><span>-1<em>y</em></span><span>1<em>z</em></span><span>1</span></p>
+            </div>
+            <p data-info="parenthese">)</p>
+            </div>
+
+
+            <h3>Génération du G-code</h3>
+
+            <p>Une fois que tous les détails liés à l'impression de la pièce sont réglés, il suffit de générer les données de programmation de l'imprimante 3D
+                au sein du fichier de FAO à l'aide du logiciel de tranchage. Ces données sont appelées G-code et correspondent à des instructions sur les actions
+                que l'imprimante doit effectuer. Il existe une version standardisée du G-code, nommé BCL, cependant elle ne contient principalement que des
+                instructions universelles et ainsi très basiques. De ce fait la plupart des machines-outils à commande numérique utilisent leur propre instruction
+                qui varient selon les entreprises, et l'industrie de l'impression 3D ne déroge pas à la règle. Voici quelques exemples de G-code utilisable par les
+                imprimantes du projet RepRap :</p>
+
+            <div class="box">
+            <table>
+                <tr><td>G</td><td>Fonction concernant le cheminement de la tête d'extrusion</td></tr>
+                <tr><td>M</td><td>Fonction concernant l'ensemble de la machine</td></tr>
+                <tr><td>X</td><td>Position absolue sur l'axe X</td></tr>
+                <tr><td>Y</td><td>Position absolue sur l'axe Y</td></tr>
+                <tr><td>Z</td><td>Position absolue sur l'axe Z</td></tr>
+                <tr><td>F</td><td>Vitesse en mm/s des moteurs de déplacement</td></tr>
+                <tr><td>S</td><td>Température en fonctionnement</td></tr>
+            </table>
+            </div>
+
+            <div class="box">
+            <table>
+                <tr><td>G00</td><td>Interpolation linéaire rapide</td></tr>
+                <tr><td>G01</td><td>Interpolation linéaire</td></tr>
+                <tr><td>G02</td><td>Interpolation circulaire(sens horaire)</td></tr>
+                <tr><td>G03</td><td>Interpolation circulaire(sens anti-horaire)</td></tr>
+                <tr><td>G28</td><td>Retour à la position d'origine</td></tr>
+                <tr><td>G90</td><td>Déplacement en coordonnées absolues</td></tr>
+                <tr><td>G91</td><td>Déplacement en coordonnées relatives</td></tr>
+                <tr><td>M84</td><td>Désactive les moteurs</td></tr>
+                <tr><td>M104</td><td>Régle la température de la tête d'extrusion</td></tr>
+            </table>
+            </div>
+
+            <p>Afin d'initialiser les imprimantes RepRap correctement, le logiciel de tranchage Slic3r incorpore par défaut deux actions G-code au début du
+                fichier :</p>
+
+            <div class="box">
+            <table>
+                <tr><td>G28</td><td>Retour à la position d'origine</td></tr>
+                <tr><td>G1 Z<em>5</em> F<em>5000</em></td><td>Déplace la tête d'extrusion d'une valeur de 5 sur l'axe Z à la vitesse de 5000 mm/s</td></tr>
+            </table>
+            </div>
+
+            <p>Le logiciel incorpore aussi trois actions G-code par défaut à la fin du fichier, afin que la machine s'éteigne correctement :</p>
+
+            <div class="box">
+            <table>
+                <tr><td>M104 S<em>0</em></td><td>Régle la température de la tête d'extrusion à 0</td></tr>
+                <tr><td>G28 X</td><td>Ramène la tête d'extrusion à sa position X d'origine</td></tr>
+                <tr><td>M84</td><td>Désactive les moteurs</td></tr>
+            </table>
+            </div>
+
+            <p>Le fichier de FAO est ainsi un simple fichier texte constitué d'une multitude d'instruction de G-code que l'imprimante 3D va interpréter une par une
+                afin de réaliser l'impression de l'objet souhaité.</p>
+
+            <!-- Début balise choix de la page pour écran de tablette -->
+            <div id="choosePageTab">
+                <a href='index.html'><</a>
+                <a href='photo-polymerisation.html'>></a>
+            </div>
+            <!-- Fin balise choix de la page pour écran de tablette -->
+
+        </article>
+
+        <!-- Début balise choix de la page pour écran d'ordinateur -->
+        <div class="choosePagePC">  <!-- first-of-type = balise gauche -->
+            <a href='index.html'><</a>
+            <p>Accueil</p>
+        </div>
+
+        <div class="choosePagePC">  <!-- last-of-type = balise droite -->
+            <a href='photo-polymerisation.html'>></a>
+            <p>Photo-polymérisation</p>
+        </div>
+        <!-- Fin balise choix de la page pour écran d'ordinateur -->
+
+        </div>
+
+        <footer>
+            <div id="footerTitle"><h1>L'impression</h1> <h2>3D</h2></div>
+            <p>TPE de première S par Julien Marconnet | Année scolaire : 2015 - 2016</p>
+            <p> Thème : Matière & forme | Discipline : Physique-chimie & mathématique</p>
+        </footer>
+
+    </body>
+</html>
